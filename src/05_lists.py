@@ -8,22 +8,29 @@ y = [8, 9, 10]
 
 # Change x so that it is [1, 2, 3, 4]
 # YOUR CODE HERE
-print(x)
+x.append(4)
+print(f'This is line 12 {x}')
 
 # Using y, change x so that it is [1, 2, 3, 4, 8, 9, 10]
 # YOUR CODE HERE
-print(x)
+x.extend(y)
+print(f'This is line 17 {x}')
 
 # Change x so that it is [1, 2, 3, 4, 9, 10]
 # YOUR CODE HERE
-print(x)
+x.pop(4)
+print(f'This is line 22 {x}')
 
 # Change x so that it is [1, 2, 3, 4, 9, 99, 10]
 # YOUR CODE HERE
-print(x)
+x.insert(5, 99)
+print(f'This is line 27 {x}')
 
 # Print the length of list x
 # YOUR CODE HERE
+print(f'This is line 31. The length of x is {len(x)}')
 
 # Print all the values in x multiplied by 1000
 # YOUR CODE HERE
+for i in x:
+	print(i * 1000)

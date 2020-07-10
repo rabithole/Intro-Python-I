@@ -12,10 +12,10 @@ import sys
 # YOUR CODE HERE
 # print(help('modules'))
 
-# x = dir(sys.argv)
+x = dir(sys.argv)
 
-# for (index, element) in enumerate(x):
-# 	print(f'Element {index} is {element}')
+for (index, element) in enumerate(x):
+	print(f'Element {index} is {element}')
 
 # Print out the OS platform you're using:
 # YOUR CODE HERE
