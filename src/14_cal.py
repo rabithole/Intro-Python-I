@@ -67,23 +67,35 @@ from datetime import datetime
 def cal():
 	# year = input('Enter the four digit year: ')
 	# month = input('Enter the month number: ')
-	numArg = len(sys.argv)
-	if numArg == 3:
-		year = sys.argv[1]
-		month = sys.argv[2]
-	if numArg == 2:
+	numArg = sys.argv
+	# print(numArg[1], numArg[2])
+	# year = numArg[1]
+	# month = numArg[2]
+	# print(year)
+	if len(numArg) == 3:
+		year = numArg[1]
+		month = numArg[2]
+		print('3')
+	elif len(numArg) == 2:
 		year = sys.argv[1]
 		month = ''
+		print('2')
 	else:
 		year = ''
 		month = ''
+		print('1')
+
+	print(f'{year}, {month}')
 
 	if year == '' and month == '':
 		print(calendar.TextCalendar().formatmonth(datetime.now().year, datetime.now().month))
+		print(f'{year} first if')
 	elif year == '':
 		print(calendar.month(datetime.now().year, int(month)))
+		print('second if')
 	elif month == '':
 		print(calendar.month(int(year), datetime.now().month))
+		print('third if')
 	else: 
 		print(f'{calendar.month(int(year), int(month))}')
 
