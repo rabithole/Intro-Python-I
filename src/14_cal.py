@@ -31,4 +31,26 @@ import sys
 import calendar
 from datetime import datetime
 
-print(datetime.date(71, 11))
+# x = dir(calendar)
+
+# for(index, element) in enumerate(x):
+# 	print(f'Element {index} is {element}')
+
+# print(calendar.firstweekday())
+
+# year, month = input('Enter the month and day: ').split()
+
+# print(f'Year: 19{year}, month: {month}')
+
+currentMonth = datetime.now().strftime('%B')
+print(currentMonth)
+
+# print(datetime.now().month)
+# print(datetime.today())
+# print(datetime(today.year, today.month, 1))
+
+# Python program to take multiple inputs from the user
+# a, b = input("Enter two of your lucky number: ").split() 
+# print("First lucky number is: ", a) 
+# print("Second lucky number is: ", b) 
+
