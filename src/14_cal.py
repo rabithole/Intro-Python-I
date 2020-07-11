@@ -38,12 +38,17 @@ from datetime import datetime
 
 # print(calendar.firstweekday())
 
-# year, month = input('Enter the month and day: ').split()
+# year, month = map(input('Enter the year and month: ').split())
 
 # print(f'Year: 19{year}, month: {month}')
 
-currentMonth = datetime.now().strftime('%B')
-print(currentMonth)
+
+# currentMonth = datetime.now().strftime('%B')
+# print(currentMonth)
+# print(datetime.now().year,datetime.now().month)
+# print(calendar.TextCalendar().formatmonth(datetime.now().year, datetime.now().month))
+
+# print(calendar.TextCalendar().formatmonth(1971, 11))
 
 # print(datetime.now().month)
 # print(datetime.today())
@@ -53,4 +58,36 @@ print(currentMonth)
 # a, b = input("Enter two of your lucky number: ").split() 
 # print("First lucky number is: ", a) 
 # print("Second lucky number is: ", b) 
+# year = datetime.now().year
+# month = datetime.now().month
+# print(f'Line 62: {year}, {month}')
+# for i in sys.argv:
+# 	print(i)
 
+def cal():
+	# year = input('Enter the four digit year: ')
+	# month = input('Enter the month number: ')
+	numArg = len(sys.argv)
+	if numArg == 3:
+		year = sys.argv[1]
+		month = sys.argv[2]
+	if numArg == 2:
+		year = sys.argv[1]
+		month = ''
+	else:
+		year = ''
+		month = ''
+
+	if year == '' and month == '':
+		print(calendar.TextCalendar().formatmonth(datetime.now().year, datetime.now().month))
+	elif year == '':
+		print(calendar.month(datetime.now().year, int(month)))
+	elif month == '':
+		print(calendar.month(int(year), datetime.now().month))
+	else: 
+		print(f'{calendar.month(int(year), int(month))}')
+
+cal()
+
+# print(calendar.month(1971, 4))
+# print(sys.argv[2], sys.argv[1], sys.argv[0])
