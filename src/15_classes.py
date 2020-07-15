@@ -9,7 +9,7 @@ class LatLon:
 		self.lon = lon
 
 x = LatLon('Lost', 9, 19)
-print(x.lat, x.lon, x.name)
+print(f'Line 12: {x.lat}, {x.lon}, {x.name}')
 # Make a class Waypoint that can be passed parameters `name`, `lat`, and `lon` to the
 # constructor. It should inherit from LatLon. Look up the `super` method.
 
