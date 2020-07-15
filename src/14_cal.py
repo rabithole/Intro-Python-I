@@ -83,9 +83,10 @@ def cal():
 	else:
 		year = ''
 		month = ''
-		print('1')
+		print('Please enter the year first!')
+		return
 
-	print(f'{year}, {month}')
+	# print(f'{year}, {month}')
 
 	if year == '' and month == '':
 		print(calendar.TextCalendar().formatmonth(datetime.now().year, datetime.now().month))
@@ -103,3 +104,5 @@ cal()
 
 # print(calendar.month(1971, 4))
 # print(sys.argv[2], sys.argv[1], sys.argv[0])
+
+8557905519
