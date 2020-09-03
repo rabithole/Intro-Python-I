@@ -39,5 +39,15 @@ print(len(x))
 # Print all the values in x multiplied by 1000
 # YOUR CODE HERE
 print('')
-while len(x):
-	print(x.pop(-1) * 1000)
+a = 0
+while x:
+	# print(x.pop(-1) * 1000)
+	print(x[a] * 1000)
+	a += 1
+	if a == len(x):
+		break
+	
+# for i in x:
+# 	print(i * 1000)
+print('')
+print(x)
