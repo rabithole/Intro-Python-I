@@ -10,14 +10,22 @@ for more info regarding list comprehensions.
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
-y = []
+y = [num for num in range(1, 6)]
+
+# comprehension above is derived from the for loop below. 
+for num in range(1, 6):
+	y.append(num)
 
 print (y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
-y = []
+y = [num ** 3 for num in range(10)]
+
+# num ** 3 in append is added to the front of the list comprehension. 
+for num in range(10):
+	y.append(num ** 3)
 
 print(y)
 
