@@ -13,8 +13,8 @@ for more info regarding list comprehensions.
 y = [num for num in range(1, 6)]
 
 # comprehension above is derived from the for loop below. 
-for num in range(1, 6):
-	y.append(num)
+# for num in range(1, 6):
+# 	y.append(num)
 
 print (y)
 
@@ -24,8 +24,8 @@ print (y)
 y = [num ** 3 for num in range(10)]
 
 # num ** 3 in append is added to the front of the list comprehension. 
-for num in range(10):
-	y.append(num ** 3)
+# for num in range(10):
+# 	y.append(num ** 3)
 
 print(y)
 
@@ -33,8 +33,16 @@ print(y)
 # elements in array a. Hint: "foo".upper() is "FOO".
 
 a = ["foo", "bar", "baz"]
+i = 0
+# while i < len(a):
+# 	print('')
+# 	print(a[i].upper())
+# 	i += 1
+print('')
+# for i in a:
+# 	print(i.upper())
 
-y = []
+y = [i.upper() for i in a]
 
 print(y)
 
@@ -44,6 +52,12 @@ print(y)
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
-y = []
+print('')
+y = [i for i in x if int(i) % 2 == 0 ]
+
+# for i in x:
+# 	if int(i) % 2 == 0:
+# 		print(i)
 
 print(y)
+print('')

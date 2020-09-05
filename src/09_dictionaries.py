@@ -62,5 +62,7 @@ print('')
 
 i = 0
 while i < len(waypoints):
+    print('')
     print(waypoints[i])
+    print('')
     i += 1
