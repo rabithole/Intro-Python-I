@@ -32,8 +32,20 @@ import calendar
 from datetime import datetime
 
 def cal():
-	# year = input('Year please!:')
 	arg = sys.argv
-	print(arg[1])
 
+	# print(len(arg))
+	if len(arg) == 1:
+		print('')
+		print(' This is the current month. \n You can enter any [month] or [year]. \n \n', calendar.TextCalendar().formatmonth(datetime.now().year, datetime.now().month))
+	elif len(arg) == 2:
+		month = arg[1]
+		print('\n', calendar.TextCalendar().formatmonth(datetime.now().year, int(month)))
+	elif len(arg) == 3:
+		month = arg[1]
+		year = arg[2]
+		print('\n', calendar.TextCalendar().formatmonth(int(year), int(month)))
+	else:
+		print('Please enter a [month] then a [year]')
+	
 cal()
